@@ -1,2 +1,0 @@
-# nichiji
-Created with CodeSandbox
