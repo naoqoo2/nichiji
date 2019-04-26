@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img width="25%" src="./assets/logo.png">
-    <HelloWorld/>
+    <input v-model="nichiji" placeholder="Please enter the date">
+    <DateCard
+      v-for="card in cards"
+      v-bind:key="card.name"
+      v-bind:value="nichiji"
+      v-bind:format="card.format"
+    ></DateCard>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
+import DateCard from "./components/DateCard";
+// aa
 export default {
   name: "App",
   components: {
-    HelloWorld
+    DateCard
+  },
+  data: function() {
+    return {
+      nichiji: "",
+      cards: [
+        { name: "One", format: "A" },
+        { name: "Two", format: "B" },
+        { name: "Three", format: "C" }
+      ]
+    };
   }
 };
 </script>
