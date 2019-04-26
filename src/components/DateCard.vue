@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-    <h2>{{ format }}</h2>
+  <div>
     <h2>{{ value }}</h2>
   </div>
 </template>
@@ -9,7 +8,6 @@
 export default {
   name: "DateCard",
   props: {
-    format: String,
     value: String
   }
 };
